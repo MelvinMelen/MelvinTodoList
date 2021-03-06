@@ -1,30 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); /*font-family: 'Roboto', sans-serif;*/
 * {
-  background-color: rgb(125, 190, 125);
-  color: #000;
-  font-size: 16;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
+  background-image: linear-gradient(120deg, #4066e0, #7953a9);
+  color: rgb(255, 244, 224);
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
 }
 
-header {
-  height: 10vh;
-  font-size: 28px;
-
+header,
+form {
+  min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main {
-  align-self: center;
-  background-color: #fff;
-  height: 80vh;
-  width: 80vh;
-  margin: 5rem;
-  margin-top: 0;
 
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: white;
+}
+
+form button {
+  color: #7953a9;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #7953a9;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo li {
+  flex: 1;
+}
+.trash-btn,
+.complete-btn {
+  background: #7953a9;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn {
+  background: rgb(73, 204, 73);
+}
+.todo-item {
+  padding: 0rem 0.5rem;
 }
