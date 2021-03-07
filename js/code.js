@@ -110,7 +110,7 @@ function getTodos(){
         todos = JSON.parse(localStorage.getItem('todos'));
     }
     todos.forEach(function(todo){
-        //Todo div
+    //Todo div
     const todoDiv = document.createElement('div');
     todoDiv.classList.add("todo");
     //Create li
