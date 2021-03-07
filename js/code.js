@@ -125,7 +125,7 @@ function getTodos(){
     todoDiv.appendChild(completedButton);
     //Trash button
     const trashButton = document.createElement('button');
-    trashButton.innerHTML = '<i class="fas fa-trash"></i>'
+    trashButton.innerHTML = '<i class="fas fa-trash-alt"></i>'
     trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
     //Append to list (ul)
