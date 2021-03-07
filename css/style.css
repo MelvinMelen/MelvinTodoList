@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, #4066e0, #7953a9);
+  background-image: linear-gradient(120deg, #7953a9, #4066e0, #7953a9);
   color: rgb(255, 244, 224);
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
@@ -33,7 +33,10 @@ form button {
   border: none;
   background-color: white;
 }
-
+form input {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
 form button {
   color: #7953a9;
   background: white;
@@ -62,6 +65,7 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 1s ease;
 }
 .todo li {
   flex: 1;
@@ -85,4 +89,47 @@ form button:hover {
 .fa-trash,
 .fa-check {
   pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+
+  color: #7953a9;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1.2rem;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #7953a9;
+  top: 0;
+  right: 0;
+  padding: 1.2rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.select:hover::after {
+  background: white;
+  color: #7953a9;
 }
